@@ -30,9 +30,12 @@ body {position: relative; font-family: 'Barlow Condensed', sans-serif; font-weig
 
 /*header*/
 #header {position:fixed; top: 0; left:0; width: 100%; z-index: 9999;}
-#header .flex-contain {padding: 10px 50px; justify-content: space-between; align-items: center;}
-#header .logo a img {width: 90px;}
-#header .menu {position: relative;}
+#header .header-wrap {padding: 10px 50px; position: relative; height: 61px;}
+#header .logo {position: absolute; left: 50px; top: 10px; width: 90px;}
+#header .logo a {position: relative; display: block; height: 100%;}
+#header .logo a img {position: absolute; top: 0; left: 0;}
+#header .logo a img + img {width: 90px; opacity: 0;}
+#header .menu {position: relative; float: right; transform: translate(10px, 10px);}
 #header .menu a { display: block; width: 23px; height: 23px;}
 #header .menu .square {position: absolute; display: block; width: 5px; height: 5px; background-color: #fff;}
 #header .menu .square:nth-child(1) {top: 0px; left: 0px;}
@@ -63,19 +66,20 @@ body {position: relative; font-family: 'Barlow Condensed', sans-serif; font-weig
 #page-indicator li.on a:after {content: ''; display: block; width: 100vw; height: 2px; background-color: #fff; position: absolute; top: 40%; left: 100%; transform:translate(0, -50%); margin-left: 10px;}
 #page1 {background:url("../images/slider-home-7.jpeg"); background-size: cover; height: 100vh; position: relative;}
 #page1 p {width: 100%;}
-#page1 .tit {position: absolute; top: 40%; left: 50%; transform:translate(-50%, -50%); font-size: 120px; text-transform: uppercase; letter-spacing: -3px; font-weight: 600; text-align: center;}
-#page1 .txt {position: absolute; top: 55%; left: 27.5%; transform:translate(-50%, -50%); font-size: 30px; text-align: center;}
-#page1 img {position: absolute; top: 50%; left: 50%; transform:translate(-50%, -50%); width: 290px;}
+#page1 .txt-wrap {position: absolute; top: 45%; left: 50%; transform:translate(-50%, -50%); }
+#page1 .tit {font-size: 120px; text-transform: uppercase; letter-spacing: -3px; font-weight: 600; text-align: left; white-space: nowrap;}
+#page1 .txt {font-size: 30px; text-align: left;}
+#page1 img {position: absolute; top: 50%; left: 53%; transform:translate(-50%, -50%); width: 290px;}
 
-#page2 {background:url("../images/slider-home-4.jpeg"); background-size: cover; height: 100vh;}
-#page2 .box {display: flex; justify-content: center; align-items: center; height: 100vh;}
+#page2 {background:url("../images/slider-home-4.jpeg"); background-size: cover; height: 100vh; }
+#page2 .box {display: flex; justify-content: center; align-items: center; height: 100vh; position: relative; z-index: 8;}
 #page2 .box > ul {max-width: 560px; }
 #page2 .box > ul > li {border-bottom: 2px solid #fff;}
 #page2 .box > ul > li .list-tit {text-transform: uppercase; padding: 15px 0; display: block; position: relative;}
 #page2 .box > ul > li .list-tit:after {content:'\f078'; position: absolute; top: 50%; right: 20px; transform: translate(0, -50%); font-family: "Font Awesome 5 Free";}
 #page2 .box > ul > li:first-child .list-detail{display: block; padding-bottom: 15px; }
 #page2 .box > ul > li .list-detail {display: none;}
-#page2 .box img {width: 300px; padding-left: 150px;}
+#page2 .box img {width: 300px; padding-left: 10vw;}
 
 .list-tit {font-size: 20px; font-weight: 700; }
 .list-detail {font-size: 17px; font-weight: 200;}
@@ -90,9 +94,9 @@ body {position: relative; font-family: 'Barlow Condensed', sans-serif; font-weig
 
 
 #page4 {background:url("../images/slider-home-5.jpeg"); background-size: cover; height: 100vh;}
-#page4 .box {display: flex; justify-content: center; align-items: center; height: 100vh;}
-#page4 .box img {width: 640px; padding-right: 50px;}
-#page4 .box > ul {width: 400px;}
+#page4 .box {display: flex; justify-content: center; align-items: center; height: 100vh; position: relative; z-index: 3;}
+#page4 .box img {width: 70vw; padding-right: 50px;}
+#page4 .box > ul {width: 50vw;}
 #page4 .box > ul > li {display: flex; justify-content: flex-start; align-items: flex-start;}
 #page4 .box > ul > li + li {padding-top: 30px;}
 #page4 .box > ul > li .img-box {width: 90px;}
@@ -111,3 +115,17 @@ body {position: relative; font-family: 'Barlow Condensed', sans-serif; font-weig
 #page5 .submit {border: 2px solid #fff; background: none;  padding: 10px 35px; margin: 50px auto; display: block;}
 #page5 .box > ul {display: flex; justify-content: center; align-items: center; margin-top: 100px; font-size: 20px; font-weight: 600;}
 #page5 .box > ul > li + li {padding-left: 15px;}
+
+
+@media only screen and (max-width: 1024px) {
+  #header .header-wrap {background-color: #fff;}
+  #header .logo {left: 90px;}
+  #header .logo a img:nth-child(1) {width: 90px; opacity: 0;}
+  #header .logo a img:nth-child(2) {width: 90px; opacity: 1;}
+  #header .menu {padding-right: 90px;}
+  #header .menu .square {background-color: #000;}
+
+  #page2 .box img {position: absolute; top: 50%; right: -10%; transform: translate(0, -50%); z-index: -1;}
+  #page4 .box img {position: absolute; top: 50%; left: -15%; transform: translate(0, -50%); z-index: -1;}
+  #page4 .box > ul {transform: translate(30%, 0);}
+}

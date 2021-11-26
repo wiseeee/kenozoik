@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/common-pc.css" rel="stylesheet" media="screen and (min-width : 980px)" />
-    <link href="./css/common-mo.css" rel="stylesheet" media="screen and (max-width : 979.9px)"/>
+    <link href="./css/common-pc.css" rel="stylesheet" media="screen and (min-width : 772px)" />
+    <link href="./css/common-mo.css" rel="stylesheet" media="screen and (max-width : 771.9px)"/>
     <script src="https://kit.fontawesome.com/3b9b603b09.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/jquery-3.5.1.min.js"></script>
@@ -19,8 +19,13 @@
 <body>
   <a href="#main" id="skip-nav">본문 바로가기</a>
   <header id="header">
-    <div class="flex-contain">
-      <h1 class="logo"><a href="#"><img src="./images/logo-kenozoik-light.png" alt="로고"/></a></h1>
+    <div class="header-wrap">
+      <h1 class="logo">
+        <a href="#">
+          <img src="./images/logo-kenozoik-light.png" alt="로고" />
+          <img src="./images/logo-kenozoik-img-1.png" alt="로고" />
+        </a>
+      </h1>
       <div class="menu">
         <a href="#">
           <span class="square"></span>
@@ -55,8 +60,10 @@
     </ul>
     <section id="page1" class="page">
       <img src="./images/slider-home-2.png" alt="핸드폰이미지"/>
-      <p class="tit">get your groove on!</p>
-      <p class="txt">Designed by creative youngsters</p>
+      <div class="txt-wrap">
+        <p class="tit">get your<br class="only-m" /> groove on!</p>
+        <p class="txt">Designed by creative youngsters</p>
+      </div>
     </section>
     <section id="page2" class="page">
       <div class="box">
