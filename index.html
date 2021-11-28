@@ -40,17 +40,26 @@
         </a>
       </div>
       <div class="menu-on">
+        <div class="flex-contain">
+          <a href="#">
+            <img src="./images/logo-kenozoik-img-1.png" alt="로고" />
+          </a>
+          <a href="#">
+            <i class="fas fa-times"></i>
+          </a>
+        </div>
+        
         <ul>
-          <li>home</li>
-          <li>pages</li>
-          <li>portfolio</li>
-          <li>blog</li>
-          <li>shop</li>
+          <li><a href="#">home</a></li>
+          <li><a href="#">pages</a></li>
+          <li><a href="#">portfolio</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">shop</a></li>
         </ul>
       </div>
     </div>
   </header>
-  <main class="main">
+  <main id="main">
     <ul id="page-indicator">
       <li class="on"><a href="#">01</a></li>
       <li><a href="#">02</a></li>
@@ -58,7 +67,7 @@
       <li><a href="#">04</a></li>
       <li><a href="#">05</a></li>
     </ul>
-    <section id="page1" class="page">
+    <section id="page1" class="page on">
       <img src="./images/slider-home-2.png" alt="핸드폰이미지"/>
       <div class="txt-wrap">
         <p class="tit">get your<br class="only-m" /> groove on!</p>
@@ -68,25 +77,45 @@
     <section id="page2" class="page">
       <div class="box">
         <ul class="list">
-          <li>
+          <li class="on">
             <a href="#"><span class="list-tit">DESIGNED WITH STYLe</span></a>
-            <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+            <ul>
+              <li>
+                <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+              </li>
+            </ul>
           </li>
           <li>
-            <span class="list-tit">groovy interface</span>
-            <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+            <a href="#"><span class="list-tit">groovy interface</span></a>
+            <ul>
+              <li>
+                <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+              </li>
+            </ul>
           </li>
           <li>
-            <span class="list-tit">crafted with care</span>
-            <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+            <a href="#"><span class="list-tit">crafted with car</span></a>
+            <ul>
+              <li>
+                <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+              </li>
+            </ul>
           </li>
           <li>
-            <span class="list-tit">lovely fonts</span>
-            <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+            <a href="#"><span class="list-tit">lovely fonts</span></a>
+            <ul>
+              <li>
+                <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+              </li>
+            </ul>
           </li>
           <li>
-            <span class="list-tit">numerous options</span>
-            <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+            <a href="#"><span class="list-tit">numerous options</span></a>
+            <ul>
+              <li>
+                <p class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut nostrum officiis ab optio eos eum minima laboriosam qui iste porro perferendis in quas at, quidem neque consequatur. Laborum, quisquam.</p>
+              </li>
+            </ul>
           </li>
         </ul>
         <img src="./images/slider-home-1.png" alt="태블릿 이미지" />
@@ -137,9 +166,13 @@
     </section>
     <section id="page5" class="page">
       <div class="box">
-        <p class="big-tit">subscribe</p>
-        <input type="email" class="email-input-box" placeholder="Type your email here">
-        <button type="submit" class="submit">send</button>
+        <p class="big-tit">
+          <span>subscribe</span>
+        </p>
+        <div class="input-wrap">
+          <input type="email" class="email-input-box" placeholder="Type your email here">
+          <button type="submit" class="submit">send</button>
+        </div>
         <ul>
           <li><a href="#">Fb.</a></li>
           <li><a href="#">Tw.</a></li>
