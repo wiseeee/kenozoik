@@ -24,7 +24,6 @@ function pageChange() {
   var scrollEvent = ('onmousewheel' in window) ? 'mousewheel' : 'DOMMouseScroll';
   var isBlocked = false;
 
-
   showPage(1);
   
   $('#page-indicator > li > a').on('click', function() {
@@ -49,7 +48,6 @@ function pageChange() {
     }
   }, {'passive': false});
 
-
   function showPage(n) {
     var scrollAmt = $('section.page:eq(' + (n - 1) + ')').offset().top;
     $('html').stop(true).animate({'scrollTop': scrollAmt}, 500, function() {
@@ -61,7 +59,6 @@ function pageChange() {
     pagePrev = (n <= 1) ? 1 : (n - 1);
     pageNext = (n >= numPage) ? numPage : (n + 1);
   }
-
 }
 
 function menuOpen(selector) {
